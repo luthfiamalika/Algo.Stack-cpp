@@ -1,1 +1,30 @@
-# Algo.Stack-cpp
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main() {
+    stack<int> number;
+
+    number.push(6);
+    number.push(12);
+    number.push(18);
+    number.push(24);
+    number.push(36);
+
+    number.pop();
+    number.pop();
+
+    number.push(42);
+    number.push(48);
+
+    stack<int> copy;
+    stack<int> temp = number;
+
+    cout << "Menampilkan keseluruhan elemen: " << endl;
+    while (!number.empty()) {
+        cout << number.top() << " ";
+        number.pop();
+    }
+
+    return 0;
+}
